@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+<div id="app"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+<script type="text/babel">      // O Babel é uma ferramenta utilizada para compilar Javascript
+                                //  inclusive é recomendacao do proprio React q utilizemos o babel
+                                //  para renderizar .JSX
+    //var h1 = React.DOM.h1(null, 'Hello h1 React');
+    ReactDOM.render(
+        <h1>Hello World</h1>,
+        document.getElementById('app')
+    );
+</script>
+</body>
+
+</html>
