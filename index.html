@@ -8,6 +8,9 @@
 
 <body>
 <div id="app"></div>
+<div id="app2"></div>
+<div id="app3"></div>
+<div id="app4"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
@@ -20,6 +23,45 @@
     ReactDOM.render(
         <h1>Hello World</h1>,
         document.getElementById('app')
+    );
+
+    var Title = React.createClass({             // Criando seus proprios componentes! \o/
+        render: function() {
+            return <h1><span>Hello World Title</span></h1>
+        }
+    })
+    ReactDOM.render(
+        <Title />,
+        document.getElementById('app2')
+    );
+
+    var TitleComQuebraDeLinha = React.createClass({
+        render: function() {
+            return (                            // Quebra de linha abaixo permitida por conta de '(' e ')'
+                <h1><span>
+                    Hello World Title em quebra de Linha das Tags
+                </span></h1>
+            )
+        }
+    })
+    ReactDOM.render(
+        <TitleComQuebraDeLinha />,
+        document.getElementById('app3')
+    );
+
+    var TitleComQuebraDeLinhaEmTags = React.createClass({
+        render: function() {
+            return (    // Como o Retorno tem que ser de apenas uma Tag, para retornar varias englobe tudo em uma só Div
+                <div>
+                    <h1>Hello ...</h1>
+                    <span>...World Title em quebra de Linha de varias Tags dentro de uma so DIV</span>
+                </ div>
+            )
+        }
+    })
+    ReactDOM.render(
+        <TitleComQuebraDeLinhaEmTags />,
+        document.getElementById('app4')
     );
 </script>
 </body>
